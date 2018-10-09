@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>CIT 261 Fluency</title>
+</head>
+<body>
+    <h1>CIT 261:03 Fluency Code Page</h1>
+    <section>
+        <h3>This section calls a function with a button to compare user input with data in an array
+        using if else statements.</h3>
+        <p>Enter an integer between 1 and 100: </p><input type="integer" id="inputBox">
+        <button type="button" onclick="myFunction()">Click Me</button>
+        <p id="If"></p>
+    </section>
+    <section>
+        <h3>Array with For Loop</h3>
+        <p id="Arr"></p>
+    </section>
+    <section>
+        <h3>Objects with Inheritance, Properties, Methods, Instantiation</h3>
+        <p id = "Obj">
+    </section>
+    <section>
+        <h3>JSON</h3>
+        <p>This is the object above as a JSON string:</p>
+        <p id = "JSON"></p>
+
+        <p>This is the array above as a JSON string:</p>
+        <p id = "JSON2"></p>
+
+        <p>Parse this JSON array into Javascript:
+            <button type="button" onclick="parse()">Parse</button></p>
+        <p id="JSON3"></p>
+    </section>
+    
+    <script>
+        var integerArray = [8,11,14,15,19,22,38,77,85,99]
+        // The next two variables are intended to get the user's input and compare it to a value from 
+        // the array. It is giving me a NaN response, and I can't figure out why.
+
+        //var text = document.getElementById("inputBox").value;
+        //var guess = parseInt(text);
+        
+        // I used the following hardcoded variable values to check that my if else statement works.
+        var guess = 77;
+        var answer = integerArray[7];
+       
+        function myFunction() {
+            if (guess < answer) {
+                var message = "Nope! " + guess + " is too LOW. Try again!";
+            }
+            else if (guess > answer) {
+                var message = "Nope! " + guess + " is too HIGH. Try again!";
+            }
+            else {
+                var message = "YOU GOT IT! The number is " + guess + ".";
+            }
+        document.getElementById("If").innerHTML = message;
+        } 
+        
+        //Array and loop
+        var myArray = ["Each", "word", "is", "one", "value", "in", "an", "array"];
+        var text = "";
+        var i;
+        for (i = 0; i < myArray.length; i++) {
+            text += myArray[i] + "<br>";
+        }
+        document.getElementById("Arr").innerHTML = text;
+
+        //Object constructor for classes.
+        function Class(name, number, section,) {
+            this.name = name;
+            this.number = number;
+            this.section = section;
+        }
+
+        //Create a Class object instantiations.
+        var class1 = new Class("Web Frontend Development", "230", "09");
+        var class2 = new Class("Security Systems", "270", "03");
+        var class3 = new Class("Mobile App Development", "261", "03");
+        var class4 = new Class("Grammar", "325", "03");
+        var class5 = new Class("British Lit", "332", "03");
+
+        //Create course name to show child inheritance of parent properties.
+        Class.prototype.course = function() {
+            return this.name + " " + this.number + ":" + this.section + ".";
+        }
+        document.getElementById("Obj").innerHTML = "My favorite course is " + class3.course();
+
+        //JSON stringify the object above. Notice: methods are dropped entirely.
+        var myJSON = JSON.stringify(class3);
+        document.getElementById("JSON").innerHTML = myJSON;
+
+        //JSON stringify array.
+        var myJSON2 = JSON.stringify(myArray);
+        document.getElementById("JSON2").innerHTML = myJSON2;
+
+        //JSON parse
+        var JSONtxt = '["Buttercup", "Graham" , "George" , "Mr. Big"]'
+        document.getElementById("JSON3").innerHTML = JSONtxt;       
+        
+        function parse() {
+            var Jobj = JSON.parse(JSONtxt);
+            document.getElementById("JSON3").innerHTML = "My dog's name is " + Jobj[0] + ".";
+        }
+        </script>
+</body>
+</html>
