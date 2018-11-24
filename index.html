@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>CIT 261 Fluency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
@@ -10,25 +11,43 @@
     
 </head>
 <body>
-    <header>
-            <h1>Fluency Code Page</h1>
-            <h2>Jennifer Ruggles <br>
-                CIT 260:03 <br>
-            </h2>
+    <div class="button-row">
+        <ul class="button-list">
+            <li><button type="button" onclick="changeHeader()">Change Header CSS Using Javascript</button></li>
+            <li><button type="button" onclick="startAnimate()">Start Animation Using Javascript</button></li>
+            <li><button type="button" onclick="changeTransition()">Button 3</button></li>
+        </ul>
+    </div>
+    <header id="header">
+        <img src="images/grover.jpg" alt="Image of Grover from Sesame Street" class="profile-image" id="profile-image">
+        <h1>Fluency Code Page</h1>
+        <h2>Jennifer Ruggles <br>
+            CIT 260:03 <br>
+        </h2>
+        <p id="p">Hover over the image to experience CSS transition effects.
+        <em>Now, click on Button 3 to change the transition using Javascript!</em></p>
     </header>
     <main>
         <ul>
             <li><a href="https://jenerallee.github.io/assignments/lesson-9/api-test.html"
-                 target="_blank">Weather for Preston, ID</a> <br>Topics covered: Use XMLHttpRequest to Consume a JSON Web Service </li>
+                 target="_blank">Weather for Preston, ID</a>
+                 <br>Topics covered: Use XMLHttpRequest to Consume a JSON Web Service </li>
             <li><a href="heroes.html"
-                 target="_blank">Super Shero Page.</a> <br>Topics covered: Loops, Functions, Variables, Parameters, Arrays, Associative Arrays, Local Storage API, Storing, and Retrieving Simple Data, Arrays, Associate Arrays, and Objects 
+                 target="_blank">Super Shero Page</a>
+                 <br>Topics covered: Loops, Functions, Variables, Parameters, Arrays, Associative Arrays,
+                  Local Storage API, Storing, and Retrieving Simple Data, Arrays, Associate Arrays, and Objects 
                  & DOM Manipulation Using createElement, appendChild, insertBefore and removeChild</li>
-            <li><a href="video.html" target="_blank">HTML5 Page</a><br>Topics covered: HTML5 tags for Audio, Video, and Canvas</li>
-            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Object Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
-            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
-            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+            <li><a href="video.html" target="_blank">HTML5 Page</a>
+                <br>Topics covered: HTML5 tags for Audio, Video, and Canvas</li>
+            <li><a href="#" target="_blank">Link to another page</a>
+                <br>Topics covered: Object Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+            <li><a href="#" target="_blank">Link to another page</a>
+                <br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+            <li><a href="#" target="_blank">Link to another page</a>
+                <br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
         </ul>
     </main>
+    <script src="scripts/csstransitions.css"></script>
  <!--   Lesson 04: <a href="zoom_0.mp4" target="_blank">ZOOM meeting recording</a>
         <h3>Objects with Inheritance, Properties, Methods, Instantiation</h3>
         <p id = "Obj">
