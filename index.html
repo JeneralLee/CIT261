@@ -19,26 +19,17 @@
     <main>
         <ul>
             <li><a href="https://jenerallee.github.io/assignments/lesson-9/api-test.html"
-                 target="_blank">Use XMLHttpRequest to Consume a JSON Web Service </a></li>
+                 target="_blank">Weather for Preston, ID</a> <br>Topics covered: Use XMLHttpRequest to Consume a JSON Web Service </li>
             <li><a href="heroes.html"
-                 target="_blank">Local Storage API, Storing, and Retrieving Simple Data, Arrays, Associate Arrays, and Objects<br>
-                & DOM Manipulation Using createElement, appendChild, insertBefore and removeChild</a></li>
-            
+                 target="_blank">Super Shero Page.</a> <br>Topics covered: Loops, Functions, Variables, Parameters, Arrays, Associative Arrays, Local Storage API, Storing, and Retrieving Simple Data, Arrays, Associate Arrays, and Objects 
+                 & DOM Manipulation Using createElement, appendChild, insertBefore and removeChild</li>
+            <li><a href="video.html" target="_blank">HTML5 Page</a><br>Topics covered: HTML5 tags for Audio, Video, and Canvas</li>
+            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Object Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+            <li><a href="#" target="_blank">Link to another page</a><br>Topics covered: Objec Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
         </ul>
     </main>
  <!--   Lesson 04: <a href="zoom_0.mp4" target="_blank">ZOOM meeting recording</a>
-    <section>
-        <h3>This section calls a function with a button to compare user input with data in an array
-        using if else statements.</h3>
-        <p>Enter an integer between 1 and 100: </p><input type="integer" id="inputBox">
-        <button type="button" onclick="myFunction()">Click Me</button>
-        <p id="If"></p>
-    </section>
-    <section>
-        <h3>Array with For Loop</h3>
-        <p id="Arr"></p>
-    </section>
-    <section>
         <h3>Objects with Inheritance, Properties, Methods, Instantiation</h3>
         <p id = "Obj">
     </section>
@@ -55,40 +46,6 @@
         <p id="JSON3"></p>
     </section>
     
-    <script>
-        var integerArray = [8,11,14,15,19,22,38,77,85,99]
-        // The next two variables are intended to get the user's input and compare it to a value from 
-        // the array. It is giving me a NaN response, and I can't figure out why.
-
-        //var text = document.getElementById("inputBox").value;
-        //var guess = parseInt(text);
-        
-        // I used the following hardcoded variable values to check that my if else statement works.
-        var guess = 77;
-        var answer = integerArray[7];
-       
-        function myFunction() {
-            if (guess < answer) {
-                var message = "Nope! " + guess + " is too LOW. Try again!";
-            }
-            else if (guess > answer) {
-                var message = "Nope! " + guess + " is too HIGH. Try again!";
-            }
-            else {
-                var message = "YOU GOT IT! The number is " + guess + ".";
-            }
-        document.getElementById("If").innerHTML = message;
-        } 
-        
-        //Array and loop
-        var myArray = ["Each", "word", "is", "one", "value", "in", "an", "array"];
-        var text = "";
-        var i;
-        for (i = 0; i < myArray.length; i++) {
-            text += myArray[i] + "<br>";
-        }
-        document.getElementById("Arr").innerHTML = text;
-
         //Object constructor for classes.
         function Class(name, number, section,) {
             this.name = name;

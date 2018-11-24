@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -17,20 +18,49 @@ h1 {
     font-family: 'Indie Flower', cursive;
     font-size: 2.5rem;
 }
+
 h2 {
     font-family: 'Amatic SC', cursive;
 }
 
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
 }
+
+li {
+    margin: 1rem;
+    padding: .5rem;
+    text-align: center;
+    max-width: 200px;
+}
+
 a {
     text-decoration: none;
 }
+
 a:visited {
     color: rgb(107, 209, 5);
 }
+
 a:hover {
     background-color: rgb(107, 209, 5);
     color: navy;
+}
+
+video {
+    border: groove gray 20px;
+    min-width: 320px;
+    margin-bottom: 50px;
+   }
+
+div  {
+    text-align: center;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
