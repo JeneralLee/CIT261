@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 15rem;
+    text-align: center;
+    background-color: rgb(85, 153, 113);
+    color: azure;
+    border: 2px solid darkolivegreen;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5rem;
+}
+h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(107, 209, 5);
+}
+a:hover {
+    background-color: rgb(107, 209, 5);
+    color: navy;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
