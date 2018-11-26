@@ -11,11 +11,11 @@
 </head>
 <body>
     <p>
-    <button onclick="myMove()">Click Me</button> 
+    <button onclick="myMove()">Click Me</button>
     </p>
-    
+    <p>Or use a touch screen to touch the ball to start it moving.</p>
     <div id ="myContainer">
-    <div id ="myAnimation"></div>
+    <div id ="myAnimation" ontouchstart="myMove()"></div>
     </div>
     <script src="scripts/cssanimations.js"></script>
 </body>
