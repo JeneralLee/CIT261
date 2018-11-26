@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Objects with Inheritance, Properties, Methods, Instantiation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/objects.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Objects with Inheritance, Properties, Methods, Instantiation</h1>
+    </header>
+    <main>
+        <h2>Object Creation Functions, Inheritance, Methods, Properties, and Instantiation</h2>
+        <p>Using an object constructor function, I created the Class function with three properties:
+             name, number, and section. I then created instantiations of the object. Here they are:</p>
+        <p id = "Obj1" class="result">
+        <p>I then created a method using prototype to add it to the object constructor. Class.course concatenates
+            each property of the Class object into one string. Each child inherits this method from the prototype. 
+            It looks like this:
+        </p>
+        <p id = "Obj2" class="result">
+        
+        <h2>JSON</h2>
+        <p>Using JSON.stringify, I turned the object above into a JSON string. Stringify drops all methods,
+            so our new property Class.course is dropped. You can tell it is JSON because the name and the value
+            are both enclosed in double quotes:</p>
+        <p id = "JSON" class="result"></p>
+        <p>Here is a JavaScript array of pets:</p>
+        <p id="JSON2" class="result"></p>
+        <p>This is the above array after using JSON.stringify:</p>
+        <p id = "JSON3" class="result"></p>
+        <p>JSON.parse turns this JSON text into a JavaScript array. Click the button to parse the
+            array back into JavaScript and to call the first item in the array to complete the sentence.
+            <button type="button" onclick="parse()">Parse</button></p>
+        <p class="result">My dog's name is <span id="JSON4">[call array]</span>.</p>
+    </main>
+    <script>
+    //Object constructor for classes.
+        function Class(name, number, section,) {
+            this.name = name;
+            this.number = number;
+            this.section = section;
+        }
+
+    //Create Class instantiations.
+        var class1 = new Class("Web Frontend Development", "230", "09");
+        var class2 = new Class("Security Systems", "270", "03");
+        var class3 = new Class("Mobile App Development", "261", "03");
+        var class4 = new Class("Grammar", "325", "03");
+        var class5 = new Class("British Lit", "332", "03");
+
+        document.getElementById("Obj1").innerHTML = class1.name +" "+ class1.number +":"+ class1.section +"<br>"
+                                                  + class2.name +" "+ class2.number +":"+ class2.section +"<br>"
+                                                  + class3.name +" "+ class3.number +":"+ class3.section +"<br>"
+                                                  + class4.name +" "+ class4.number +":"+ class4.section +"<br>"
+                                                  + class5.name +" "+ class5.number +":"+ class5.section +"<br>"
+
+    //Create course name method to show child inheritance of parent properties.
+        Class.prototype.course = function() {
+            return this.name + " " + this.number + ":" + this.section + ".";
+        }
+        document.getElementById("Obj2").innerHTML = class3.course();
+
+    //JSON stringify the object above. Notice: methods are dropped entirely.
+        var myJSON = JSON.stringify(class3);
+        document.getElementById("JSON").innerHTML = myJSON;
+
+    //JSON stringify array.
+        var myArray = ["Buttercup", "Graham" , "George" , "Mr. Big"];
+        for (i=0; i<myArray.length; i++) {
+            document.getElementById("JSON2").innerHTML += myArray[i] + "<br>";
+        }
+
+        var myJSON2 = JSON.stringify(myArray);
+        document.getElementById("JSON3").innerHTML = myJSON2;
+
+    //JSON parse
+        
+        function parse() {
+            var Jobj = JSON.parse(myJSON2);
+            document.getElementById("JSON4").innerHTML = Jobj[0];
+        }
+        </script>
+
+</body>
+</html>

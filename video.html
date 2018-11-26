@@ -16,7 +16,7 @@
         <button onclick="makeNormal()">Normal</button>
         <br><br>
         <video id="lesson04" controls>
-            <source src="zoom_0.mp4" type="video/mp4">
+            <source src="files/zoom_0.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -25,52 +25,16 @@
         <button onclick="disableMute()" type="button">Enable sound</button>
         <p>Listen to 3 Nephi 11:</p>
         <audio id="BOM" controls>
-            <source src="scripts/2015-11-1850-3-nephi-11-female-voice-64k-eng.mp3">
+            <source src="files/2015-11-1850-3-nephi-11-female-voice-64k-eng.mp3">
             Your browser does not support the audio tag.
         </audio>
     </div>
-    <div>
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    <div class="canvas">
+        <button type="button" onclick="draw()">Fill this Canvas</button><br>
+        <canvas id="myCanvas" width="600" height="200">
                 Your browser does not support the HTML5 canvas tag.
         </canvas>
     </div>
-    <script>
-        var myVideo = document.getElementById("lesson04"); 
-
-        function playPause() { 
-            if (myVideo.paused) 
-                myVideo.play(); 
-            else 
-                myVideo.pause(); 
-        } 
-
-        function makeSmall() { 
-            myVideo.width = 320; 
-        } 
-
-        function makeNormal() { 
-            myVideo.width = 640; 
-        }     
-
-        function makeBig() { 
-            myVideo.width = 1000; 
-        } 
-
-        var aud = document.getElementById("BOM");
-
-        function enableMute() { 
-            aud.muted = true;
-        } 
-
-        function disableMute() { 
-            aud.muted = false;
-        } 
-
-       var c = document.getElementById("myCanvas");
-       var ctx = c.getContext("2d");
-       ctx.font = "30px Arial";
-       ctx.fillText("Hello World",20,60);
-       
-    </script>
+    <script src="scripts/video.js"></script>
 </body>
 </html>

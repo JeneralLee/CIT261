@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+    background-color: rgb(85, 153, 113);
+    color: azure;
+    border: 2px solid darkolivegreen;
+    padding-top: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amatic', cursive;
+}
+
+main {
+    margin: 10px 25px;
+}
+
+.result {
+    color: rgb(85, 153, 113);
+    margin-left: 40px;
+}
