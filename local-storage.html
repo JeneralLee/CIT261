@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Local Storage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+    <main class="local-storage">
+        <h1>Store a List</h1>
+        <p>
+            Type an item into the input field and press enter. This item will be shown in the List
+            onscreen, and it will be stored in Local Storage. Refresh the page. The list remains onscreen
+            and in Local Storage. Press button to clear data from screen and local storage.
+        </p>
+    
+        <form>
+          <input id="item" type="text" placeholder="New" required>
+        </form>
+    
+        <h2>List</h2>
+        <ul class="storageList"></ul>
+    
+        <button>Clear Storage</button>
+    </main>
+    <script src="scripts/local-storage.js"></script>
+</body>
+</html>
