@@ -70,30 +70,30 @@ document.getElementById("currentDate").innerHTML = n;
 
 /*----- Pull JSON data -----*/
 var myDiv = document.getElementById("closures")
-var JSONrequestURL = "https://raw.githubusercontent.com/JeneralLee/JeneralLee.github.io/master/assignments/temple-site/files/temple-closures.json";
+var JSONrequestURL = "https://github.com/JeneralLee/CIT261/blob/master/mobile-web-app/files/closures.json";
 var JSONrequest = new XMLHttpRequest();
 
 JSONrequest.open("GET", JSONrequestURL);
 JSONrequest.responseType = "json";
 JSONrequest.send();
 JSONrequest.onload = function() {
-var x = JSONrequest.response;
-populateHeader(x);
-showDates(x);
+	var x = JSONrequest.response;
+	populateHeader(x);
+	showDates(x);
 }
 
 function populateHeader(jsonObj) {
-	var myH3 = document.createElement ("h3");
-	myH3.textContent = jsonObj["2018"];
+	var myH3 = document.createElement("h3");
+	myH3.textContent = "2018";
 	myDiv.appendChild(myH3);
+	console.log(jsonObj);
 }
 
 function showDates(jsonObj) {
-	var dates = jsonObj['2018'];
+	var dates = jsonObj["2018"];
 	for (var i = 0; i < dates.length; i++) {
 		var myPara = document.createElement("p");
-
-	myPara.textContent += dates[i] + "<br>"
+		myPara.textContent += dates[i] + "<br>"
 	}
 }
 /*----- Local Storage -----*/
