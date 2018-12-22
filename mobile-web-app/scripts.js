@@ -60,42 +60,55 @@ $(function() {
 	});
 });
 
-/*----- Local Storage -----*/
-function saveData() {
-	var clear = document.getElementById("cleardata");
-	var fname = document.getElementById("fname").value;
-	var lname = document.getElementById("lname").value;
-	var email = document.getElementById("email").value;
-	var phone = document.getElementById("phone").value;
-	var comments = document.getElementById("comments").value;
-	var teen = document.getElementById("teen").value;
-	var child = document.getElementById("child").value;
-	var baby = document.getElementById("baby").value;
-	var date = document.getElementById("date").value;
-	
-	localStorage.setItem("fname",JSON.stringify(fname));
-	localStorage.setItem("lname",JSON.stringify(lname));
-	localStorage.setItem("email",JSON.stringify(email));
-	localStorage.setItem("phone",JSON.stringify(phone));
-	localStorage.setItem("date",JSON.stringify(date));
-	localStorage.setItem("age3",JSON.stringify(teen));
-	localStorage.setItem("age2",JSON.stringify(child));
-	localStorage.setItem("age1",JSON.stringify(baby));
-	localStorage.setItem("comments",JSON.stringify(comments));
+/*----- Current Date -----*/
+var d = new Date(),
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
+    'Nov','Dec'],
+    days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var n = days[d.getDay()]+', '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear()
+document.getElementById("currentDate").innerHTML = n;
 
-	clear.addEventListener("click", function() {
-		localStorage.clear();
-	});
+/*----- Pull JSON data -----*/
+var myDiv = document.getElementById("closures")
+var JSONrequestURL = "https://raw.githubusercontent.com/JeneralLee/JeneralLee.github.io/master/assignments/temple-site/files/temple-closures.json";
+var JSONrequest = new XMLHttpRequest();
+
+JSONrequest.open("GET", JSONrequestURL);
+JSONrequest.responseType = "json";
+JSONrequest.send();
+JSONrequest.onload = function() {
+var x = JSONrequest.response;
+populateHeader(x);
+showDates(x);
 }
 
-/*----- Submit Button -----*/
+function populateHeader(jsonObj) {
+	var myH3 = document.createElement ("h3");
+	myH3.textContent = jsonObj["2018"];
+	myDiv.appendChild(myH3);
+}
+
+function showDates(jsonObj) {
+	var dates = jsonObj['2018'];
+	for (var i = 0; i < dates.length; i++) {
+		var myPara = document.createElement("p");
+
+	myPara.textContent += dates[i] + "<br>"
+	}
+}
+/*----- Local Storage -----*/
+
+/*----- Submit Button 
 const submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click", thankYou);
 
 function thankYou() {
 	var p = document.getElementById("booking");
-	var mySection = document.createElement("div");
-	mySection.innerHTML = "Thank you for your submission.";
-	p.appendChild(mySection);}
+	var newSection = document.createElement("section");
+	var myH2 = document.createElement("h2");
+	var myDiv = document.createElement("div");
+	p.appendChild(mySection);
 
-	
+
+}
+-----*/	

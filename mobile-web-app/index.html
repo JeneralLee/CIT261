@@ -70,17 +70,6 @@
         <section id="booking">
             <form method="get" id="bookForm">
                 <fieldset>
-                    <legend>Tell us about the kids</legend>
-                    What day can we serve you?<br>
-                    <input type="date" name="date" id="date"><br>
-                    What age ranges?<br>
-                    <input type="checkbox" name="age1" value="infant" id="baby" onchange="saveData()">&thinsp;Infant - toddler<br>
-                    <input type="checkbox" name="age2" value="child" id="child">&thinsp;4 - 12 years<br>
-                    <input type="checkbox" name="age3" value="teen" id="teen">&thinsp;13+ years<br>
-                    Special Accomodations / Comments:<br>
-                    <textarea name="comments" rows="3" cols="30" placeholder="Optional"" id="comments"></textarea>
-                </fieldset>
-                <fieldset>
                     <legend>Tell us about yourself</legend>
                     First Name:<br>
                     <input type="text" name="firstName" placeholder="Jane" id="fname" onchange="saveData()"><br>
@@ -117,6 +106,10 @@
         </section>
         <section id="temple">
             <h2>Houston Temple Information</h2>
+            <div class="currentCond">
+                Currently it is <span id="weather"></span>&deg;F and <span id="sky"></span><br>
+                on <span id="currentDate"></span>.
+            </div>
             <div class="temple">
                 <ul class="accordion">
                     <li>
@@ -150,9 +143,6 @@
                             </tbody>
                         </table>
                         </li>
-                        <li>
-                            <div class="weather">Current weather conditions are <span id="weather"></span>&deg;F and <span id="sky"></span></div>
-                        </li>
                         </ul>
                     </li>
                     <li>
@@ -178,28 +168,31 @@
                             </table>
                             <p>For initiatory information and schedule, please call the temple.</p>
                             <p>For sealing information and schedule, please call the temple.</p>
-                        </li>
-                        <li>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2" class="tabletitle">Endowments</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Weekdays</td>
-                                    <td>8am - 8pm on the hour</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>7am - 7pm on the hour</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </li>
-                    </ul>
-                </li>
+                            </li>
+                            <li>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="tabletitle">Endowments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Weekdays</td>
+                                        <td>8am - 8pm on the hour</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>7am - 7pm on the hour</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </li>
+                            <li>
+                                <div class="closures"></div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </section>
