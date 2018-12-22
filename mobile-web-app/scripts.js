@@ -1,3 +1,10 @@
+/*----- Card Flip -----*/
+$(function(){
+	$(".card").click(function() {
+		$(this).toggleClass("is-flipped");
+	});
+});
+
 /*----- Accordion Menu -----*/
 $(function() {
 	$('.toggle').click(function(e) {
@@ -54,3 +61,41 @@ $(function() {
 });
 
 /*----- Local Storage -----*/
+function saveData() {
+	var clear = document.getElementById("cleardata");
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+	var comments = document.getElementById("comments").value;
+	var teen = document.getElementById("teen").value;
+	var child = document.getElementById("child").value;
+	var baby = document.getElementById("baby").value;
+	var date = document.getElementById("date").value;
+	
+	localStorage.setItem("fname",JSON.stringify(fname));
+	localStorage.setItem("lname",JSON.stringify(lname));
+	localStorage.setItem("email",JSON.stringify(email));
+	localStorage.setItem("phone",JSON.stringify(phone));
+	localStorage.setItem("date",JSON.stringify(date));
+	localStorage.setItem("age3",JSON.stringify(teen));
+	localStorage.setItem("age2",JSON.stringify(child));
+	localStorage.setItem("age1",JSON.stringify(baby));
+	localStorage.setItem("comments",JSON.stringify(comments));
+
+	clear.addEventListener("click", function() {
+		localStorage.clear();
+	});
+}
+
+/*----- Submit Button -----*/
+const submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", thankYou);
+
+function thankYou() {
+	var p = document.getElementById("booking");
+	var mySection = document.createElement("div");
+	mySection.innerHTML = "Thank you for your submission.";
+	p.appendChild(mySection);}
+
+	

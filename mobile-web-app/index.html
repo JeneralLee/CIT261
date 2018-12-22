@@ -37,44 +37,68 @@
     </nav>
     <main>
         <section id="home" class="reveal">
-            <p>Safe, quality childcare for Houston temple patrons <br>
-               Experienced, certified providers <br>
-               Top-notch facility for sleeping, eating, &amp; indoor-outdoor play <br>
-               Conveniently located near the temple <br>
-               Temple &amp; family centered books, activities, &amp; technology <br>
-               Locker rooms for storage &amp; changing from church to day clothes
-            </p>
+            <h2>Click images for information</h2>
+        <div class="scene">
+            <div class="card">
+                <figure class="cardFace cardFront">
+                    <img src="images/Optimized-marisa-howenstine-1069223-unsplash.jpg" alt="children playing blocks">
+                    <figcaption>
+                        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@marisahowenstine?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Marisa Howenstine"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Marisa Howenstine</span></a>
+                    </figcaption>
+                </figure>
+                <p class="cardFace cardBack">Safe, quality childcare for Houston temple patrons <br>
+                Experienced, certified providers <br>
+                Top-notch facility for napping, eating, &amp; indoor-outdoor play
+                </p>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="card">
+                <figure class="cardFace cardFront">
+                    <img src="images/Optimized-ben-white-128604-unsplash.jpg" alt="child holding scriptures">
+                    <figcaption>
+                        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@benwhitephotography?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ben White"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ben White</span></a>
+                    </figcaption>
+                </figure>
+                <p class="cardFace cardBack">Conveniently located near the temple <br>
+                Temple &amp; family centered books, activities, &amp; technology <br>
+                Locker rooms for storage &amp; changing from church to day clothes
+                </p>
+            </div>
+        </div>
         </section>
         <section id="booking">
-            <form method="get">
+            <form method="get" id="bookForm">
                 <fieldset>
                     <legend>Tell us about the kids</legend>
                     What day can we serve you?<br>
-                    <input type="date" name="date"><br>
+                    <input type="date" name="date" id="date"><br>
                     What age ranges?<br>
-                    <input type="checkbox" name="age1" value="infant">&thinsp;Infant - toddler<br>
-                    <input type="checkbox" name="age2" value="child">&thinsp;4 - 12 years<br>
-                    <input type="checkbox" name="age3" value="teen">&thinsp;13+ years<br>
+                    <input type="checkbox" name="age1" value="infant" id="baby" onchange="saveData()">&thinsp;Infant - toddler<br>
+                    <input type="checkbox" name="age2" value="child" id="child">&thinsp;4 - 12 years<br>
+                    <input type="checkbox" name="age3" value="teen" id="teen">&thinsp;13+ years<br>
                     Special Accomodations / Comments:<br>
-                    <textarea name="comments" rows="3" cols="30" placeholder="Optional"></textarea>
+                    <textarea name="comments" rows="3" cols="30" placeholder="Optional"" id="comments"></textarea>
                 </fieldset>
                 <fieldset>
                     <legend>Tell us about yourself</legend>
                     First Name:<br>
-                    <input type="text" name="firstName" placeholder="Jane"><br>
+                    <input type="text" name="firstName" placeholder="Jane" id="fname" onchange="saveData()"><br>
                     Last Name:<br>
-                    <input type="text" name="lastName" placeholder="Doe"><br>
+                    <input type="text" name="lastName" placeholder="Doe" id="lname"><br>
                     Email:<br>
-                    <input type="email" name="email" placeholder="someone@email.com"><br>
+                    <input type="email" name="email" placeholder="someone@email.com" id="email"><br>
                     Phone:<br>
-                    <input type="tel" name="telephone" placeholder="301 555 1234"><br>
+                    <input type="tel" name="telephone" placeholder="301 555 1234" id="phone"><br>
                 </fieldset>
                 <button type="button" value="Submit" id="submit">Submit</button>
-                <button type="button" value="cleardata">Clear</button>
+                <button type="button" value="cleardata" id="cleardata">Clear</button>
             </form>
         </section>
         <section id="contact">
-            <p>Want to chat? 1-800-555-1234</p>
+            <h2>Want to chat?</h2>
+            <div class="info">
+            <p>Call toll-free 1-800-555-1234</p>
             <p>We are located at: <br>
                123 Temple Road #000<br>
                Houston, TX  77379
@@ -83,13 +107,20 @@
                 Or send us an email:<br>
                 ChildrenInZion@email.com
             </p>
+            </div>
+            <figure>
+                <img src="images/Optimized-rawpixel-1055967-unsplash.jpg" alt="woman talking on phone">
+                <figcaption>
+                        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from rawpixel"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">rawpixel</span></a>
+                </figcaption>
+            </figure>
         </section>
         <section id="temple">
+            <h2>Houston Temple Information</h2>
             <div class="temple">
-                <h3>Houston Temple</h3>
                 <ul class="accordion">
                     <li>
-                        <a class="toggle" href="javascript:void(0);">Temple Information</a>
+                        <a class="toggle" href="javascript:void(0);">Location &amp; Services</a>
                         <ul class="inner">
                         <li>
                         <table>
@@ -179,7 +210,7 @@
             </video>
         </section>
         <div class="audio">
-            <audio id="song" controls autoplay loop>
+            <audio id="song" controls loop autoplay>
                 <source src="files/2002-01-0850-i-love-to-see-the-temple-music-only-192k-eng.mp3">
                 Your browser does not support the audio tag.
             </audio>

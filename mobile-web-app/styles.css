@@ -74,6 +74,9 @@ main {
     padding: 25px;
 }
 
+h2 {
+    font-family: "Cinzel", serif;
+}
 /*----- Accordion Menu -----*/
 ul.inner {
     display: none;
@@ -139,11 +142,46 @@ main > section {
 
 .audio {
     display: grid;
-align-content: flex-end;
-justify-content: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
 }
 
 .video {
     width: 640px;
 }
 
+/*----- Card Flip -----*/
+.scene {
+    width: 400px;
+    height: 300px;
+    perspective: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 1s;
+    -webkit-transform-style: preserve-3d;
+    margin-bottom: 10px;
+}
+
+.cardFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
