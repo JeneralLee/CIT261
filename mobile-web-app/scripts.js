@@ -62,8 +62,8 @@ $(function() {
 
 /*----- Current Date -----*/
 var d = new Date(),
-    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
-    'Nov','Dec'],
+    months = ['January','February','March','April','May','June','July','August','September','October',
+    'November','December'],
     days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 var n = days[d.getDay()]+', '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear()
 document.getElementById("currentDate").innerHTML = n;
@@ -117,18 +117,25 @@ function showDates(jsonObj) {
 	myDiv.appendChild(myPara3);
 	}
 /*----- Local Storage -----*/
+function storeForm() {
+	const fname = document.getElementById("fname").value;
+	const lname = document.getElementById("lname").value;
+	const phone = document.getElementById("phone").value;
+	const email = document.getElementById("email").value;
 
-/*----- Submit Button 
-const submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click", thankYou);
-
-function thankYou() {
-	var p = document.getElementById("booking");
-	var newSection = document.createElement("section");
-	var myH2 = document.createElement("h2");
-	var myDiv = document.createElement("div");
-	p.appendChild(mySection);
-
-
+	const person = {
+	fname: fname,
+	lname: lname,
+	phone: phone,
+	email: email
 }
------*/	
+
+window.localStorage.setItem("user", JSON.stringify(person));
+
+document.getElementById("thanks").innerHTML = "Thank you. You will receive a phone call from our office shortly.";
+}
+
+/*----- Clear Storage -----*/
+function clearData() {
+	window.localStorage.clear();
+}

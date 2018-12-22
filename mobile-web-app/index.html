@@ -15,16 +15,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header class="w3-content w3-display-container">
+    <header>
         <img class="logo" src="images/logo-words-fff.png" alt="temple logo">
         <img class="headerPix" src="images/temple1.jpg" alt="houston temple exterior">
         <img class="headerPix" src="images/temple2.jpg" alt="houston temple celestial room">
         <img class="headerPix" src="images/temple3.jpg" alt="houston temple at sunset">
         <img class="headerPix" src="images/temple4.jpg" alt="houston temple baptism font">
         <img class="headerPix" src="images/temple5.jpg" alt="houston temple exterior">
-    <!--    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    -->
     </header>
     <nav class="menu">
         <ul class="mainnav">
@@ -72,7 +69,7 @@
                 <fieldset>
                     <legend>Tell us about yourself</legend>
                     First Name:<br>
-                    <input type="text" name="firstName" placeholder="Jane" id="fname" onchange="saveData()"><br>
+                    <input type="text" name="firstName" placeholder="Jane" id="fname"><br>
                     Last Name:<br>
                     <input type="text" name="lastName" placeholder="Doe" id="lname"><br>
                     Email:<br>
@@ -80,9 +77,10 @@
                     Phone:<br>
                     <input type="tel" name="telephone" placeholder="301 555 1234" id="phone"><br>
                 </fieldset>
-                <button type="button" value="Submit" id="submit">Submit</button>
-                <button type="button" value="cleardata" id="cleardata">Clear</button>
+                <button type="button" value="Submit" id="submit" onclick="storeForm()">Submit</button>
+                <button type="button" value="cleardata" id="cleardata" onclick="clearData()">Clear</button>
             </form>
+            <div id="thanks"></div>
         </section>
         <section id="contact">
             <h2>Want to chat?</h2>
