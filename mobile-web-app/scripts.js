@@ -70,7 +70,7 @@ document.getElementById("currentDate").innerHTML = n;
 
 /*----- Pull JSON data -----*/
 var myDiv = document.getElementById("closures")
-var JSONrequestURL = "https://github.com/JeneralLee/CIT261/blob/master/mobile-web-app/files/closures.json";
+var JSONrequestURL = "https://raw.githubusercontent.com/JeneralLee/CIT261/master/mobile-web-app/files/closures.json";
 var JSONrequest = new XMLHttpRequest();
 
 JSONrequest.open("GET", JSONrequestURL);
