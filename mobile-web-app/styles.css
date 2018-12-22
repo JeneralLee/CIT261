@@ -76,6 +76,12 @@ main {
 
 h2 {
     font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 /*----- Accordion Menu -----*/
 ul.inner {

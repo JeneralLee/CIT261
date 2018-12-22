@@ -69,6 +69,12 @@ var n = days[d.getDay()]+', '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFull
 document.getElementById("currentDate").innerHTML = n;
 
 /*----- Pull JSON data -----*/
+var myHead1 = document.createElement("h3");
+var myHead2 = document.createElement("h3");
+var myHead3 = document.createElement("h3");
+var myPara1 = document.createElement("p");
+var myPara2 = document.createElement("p");
+var myPara3 = document.createElement("p");
 var myDiv = document.getElementById("closures")
 var JSONrequestURL = "https://raw.githubusercontent.com/JeneralLee/CIT261/master/mobile-web-app/files/closures.json";
 var JSONrequest = new XMLHttpRequest();
@@ -83,19 +89,33 @@ JSONrequest.onload = function() {
 }
 
 function populateHeader(jsonObj) {
-	var myH3 = document.createElement("h3");
-	myH3.textContent = "2018";
-	myDiv.appendChild(myH3);
+	myHead1.textContent = "2018";
+	myHead2.textContent = "2019";
+	myHead3.textContent = "2020";
 	console.log(jsonObj);
 }
 
 function showDates(jsonObj) {
-	var dates = jsonObj["2018"];
-	for (var i = 0; i < dates.length; i++) {
-		var myPara = document.createElement("p");
-		myPara.textContent += dates[i] + "<br>"
+	var year1 = jsonObj["2018"];
+	var year2 = jsonObj["2019"];
+	var year3 = jsonObj["2020"];
+	for (var i = 0; i < year1.length; i++) {
+		myPara1.innerHTML += year1[i] + "<br>";
 	}
-}
+	for (var j = 0; j < year2.length; j++) {
+		myPara2.innerHTML += year2[j] + "<br>";
+	}
+	for (var k = 0; k < year3.length; k++) {
+		myPara3.innerHTML += year3[k] + "<br>";
+	}
+
+	myDiv.appendChild(myHead1);
+	myDiv.appendChild(myPara1);
+	myDiv.appendChild(myHead2);
+	myDiv.appendChild(myPara2);
+	myDiv.appendChild(myHead3);
+	myDiv.appendChild(myPara3);
+	}
 /*----- Local Storage -----*/
 
 /*----- Submit Button 
