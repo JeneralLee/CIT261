@@ -1,0 +1,149 @@
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-gap: 10px;
+    background-color: #0f0f0f;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr 5fr;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*----- Header -----*/
+header {
+    display: grid;
+    grid-gap: 10px;
+    margin: 0;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.headerPix {
+/*    display:none;*/
+    width: 200px;
+    align-self: stretch;
+}
+
+/*----- Navigation Menu -----*/
+nav{
+    display: grid;
+    grid-auto-flow: row;
+    background-color: #413e3e;
+    font-family: 'Cinzel', serif;
+    justify-content: center;
+    align-content: space-around;
+}
+
+nav > ul {
+    display: grid;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.mainnav > li {
+    padding: 20px 0;
+    font-size: 1.3rem;
+}
+
+.mainnav >li:hover {
+    background: #0f0f0f;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all .3s;
+    padding: 20px 5px;
+}
+
+/*----- Main -----*/
+main {
+    background-color: #686565;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+}
+
+/*----- Accordion Menu -----*/
+ul.inner {
+    display: none;
+}
+
+li > a.toggle {
+    min-width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: "Cinzel", serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.accordion > li {
+    width: 600px;
+    border: #fff solid 3px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #413e3e;
+}
+
+table {
+    width: 550px;
+}
+
+.weather {
+    color: rgb(219, 55, 82);
+    font-size: larger;
+}
+
+/*----- Style Sections -----*/
+.reveal {
+    display: initial;
+    margin-right: 20px;
+    position: relative;
+    -webkit-animation-name: slideOut; /*Safari 4.0 - 8.0*/
+    -webkit-animation-duration: .5s; /*Safari 4.0 - 8.0*/
+    animation-name: slideOut;
+    animation-duration: .5s;
+}
+
+/*Safari 4.0 - 8.0*/
+@-webkit-keyframes slideOut {
+    0% {right:-2410px;}
+    100% {right:0px;}
+}
+
+/*Standard Syntax*/
+@keyframes slideOut {
+    0% {right:-2410px;}
+    100% {right:0px;}
+}
+
+main > section {
+    display: none;
+}
+
+#song {
+    max-width: 110px;
+    max-height: 40px;
+}
+
+.audio {
+    display: grid;
+align-content: flex-end;
+justify-content: flex-end;
+}
+
+.video {
+    width: 640px;
+}
+

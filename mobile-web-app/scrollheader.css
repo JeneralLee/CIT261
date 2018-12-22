@@ -1,0 +1,11 @@
+body {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+.headerPix {
+    display:none;
+    width: 100%;
+}

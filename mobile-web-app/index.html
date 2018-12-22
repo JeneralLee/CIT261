@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Children in Zion Childcare</title>
+    <meta name="description" content="children in zion childcare for houston temple patrons
+    church of jesus christ of latter-day saints">
+    <!--<link rel="stylesheet" href="../../styles/normalize.css">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <!--The next stylesheet is for hamburger menu-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="w3-content w3-display-container">
+        <img class="logo" src="images/logo-words-fff.png" alt="temple logo">
+        <img class="headerPix" src="images/temple1.jpg" alt="houston temple exterior">
+        <img class="headerPix" src="images/temple2.jpg" alt="houston temple celestial room">
+        <img class="headerPix" src="images/temple3.jpg" alt="houston temple at sunset">
+        <img class="headerPix" src="images/temple4.jpg" alt="houston temple baptism font">
+        <img class="headerPix" src="images/temple5.jpg" alt="houston temple exterior">
+    <!--    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    -->
+    </header>
+    <nav class="menu">
+        <ul class="mainnav">
+            <li><a id="what-we-do" href="javascript:void(0);">What we do</a></li>
+            <li><a id="book-us-now" href="javascript:void(0);">Book us now</a></li>
+            <li><a id="contact-us" href="javascript:void(0);">Contact us</a></li>
+            <li><a id="temple-info" href="javascript:void(0);">Temple info</a></li>
+            <li><a id="families-forever" href="javascript:void(0);">Families are forever</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="reveal">
+            <p>Safe, quality childcare for Houston temple patrons <br>
+               Experienced, certified providers <br>
+               Top-notch facility for sleeping, eating, &amp; indoor-outdoor play <br>
+               Conveniently located near the temple <br>
+               Temple &amp; family centered books, activities, &amp; technology <br>
+               Locker rooms for storage &amp; changing from church to day clothes
+            </p>
+        </section>
+        <section id="booking">
+            <form method="get">
+                <fieldset>
+                    <legend>Tell us about the kids</legend>
+                    What day can we serve you?<br>
+                    <input type="date" name="date"><br>
+                    What age ranges?<br>
+                    <input type="checkbox" name="age1" value="infant">&thinsp;Infant - toddler<br>
+                    <input type="checkbox" name="age2" value="child">&thinsp;4 - 12 years<br>
+                    <input type="checkbox" name="age3" value="teen">&thinsp;13+ years<br>
+                    Special Accomodations / Comments:<br>
+                    <textarea name="comments" rows="3" cols="30" placeholder="Optional"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Tell us about yourself</legend>
+                    First Name:<br>
+                    <input type="text" name="firstName" placeholder="Jane"><br>
+                    Last Name:<br>
+                    <input type="text" name="lastName" placeholder="Doe"><br>
+                    Email:<br>
+                    <input type="email" name="email" placeholder="someone@email.com"><br>
+                    Phone:<br>
+                    <input type="tel" name="telephone" placeholder="301 555 1234"><br>
+                </fieldset>
+                <button type="button" value="Submit" id="submit">Submit</button>
+                <button type="button" value="cleardata">Clear</button>
+            </form>
+        </section>
+        <section id="contact">
+            <p>Want to chat? 1-800-555-1234</p>
+            <p>We are located at: <br>
+               123 Temple Road #000<br>
+               Houston, TX  77379
+            </p>
+            <p>
+                Or send us an email:<br>
+                ChildrenInZion@email.com
+            </p>
+        </section>
+        <section id="temple">
+            <div class="temple">
+                <h3>Houston Temple</h3>
+                <ul class="accordion">
+                    <li>
+                        <a class="toggle" href="javascript:void(0);">Temple Information</a>
+                        <ul class="inner">
+                        <li>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Contact Info</td>
+                                    <td>Services</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15725 Champion Forest Dr.</td>
+                                    <td>Clothing rental available</td>
+                                </tr>
+                                <tr>
+                                    <td>Spring, TX 77379-7036</td>
+                                    <td>No cafeteria available</td>
+                                </tr>
+                                <tr>   
+                                    <td>United States</td>
+                                    <td>No patron housing available</td>    
+                                </tr>
+                                <tr>    
+                                    <td>(1) 281-376-6804</td>
+                                    <td>Distribution center nearby</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </li>
+                        <li>
+                            <div class="weather">Current weather conditions are <span id="weather"></span>&deg;F and <span id="sky"></span></div>
+                        </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" href="javascript:void(0);">Schedule</a>
+                        <ul class="inner">
+                            <li>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="tabletitle">Baptisms</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Weekdays</td>
+                                        <td>8am - 9pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>7am - 4pm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>For initiatory information and schedule, please call the temple.</p>
+                            <p>For sealing information and schedule, please call the temple.</p>
+                        </li>
+                        <li>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="tabletitle">Endowments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Weekdays</td>
+                                    <td>8am - 8pm on the hour</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>7am - 7pm on the hour</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </section>
+        <section id="video">
+            <video class="video" controls>
+                <source src="files/2009-03-013-the-blessings-of-the-temple-360p-eng.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <div class="audio">
+            <audio id="song" controls autoplay loop>
+                <source src="files/2002-01-0850-i-love-to-see-the-temple-music-only-192k-eng.mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        </main>
+        <script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
